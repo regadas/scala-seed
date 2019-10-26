@@ -8,6 +8,7 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "gha-hello-world",
+    crossScalaVersions := Seq("2.12.10", scalaVersion.value),
     libraryDependencies += scalaTest % Test
   )
 
