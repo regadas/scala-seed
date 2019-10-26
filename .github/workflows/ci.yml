@@ -1,14 +1,18 @@
 name: gha-hello-world
 on: [push]
 
+
 jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: ['8.0.232', '11.0.5']
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-java@v1
         with:
-          java-version: '11.0.5'
+          java-version: ${{ matrix.java }}
           architecture: x64
       - run: sbt test
