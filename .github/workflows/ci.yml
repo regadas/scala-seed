@@ -3,6 +3,16 @@ on: [push]
 
 
 jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '11.0.5'
+          architecture: x64
+      - run: sbt scalafmtCheckAll scalafmtSbtCheck
   build:
     name: Test
     runs-on: ubuntu-latest
