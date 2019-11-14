@@ -1,7 +1,6 @@
 import Dependencies._
 
 ThisBuild / scalaVersion := "2.13.1"
-ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "io.regadas"
 ThisBuild / organizationName := "regadas"
 ThisBuild / licenses := Seq(
@@ -23,7 +22,6 @@ ThisBuild / developers := List(
   )
 )
 ThisBuild / publishMavenStyle := true
-ThisBuild / publishTo := sonatypePublishToBundle.value
 ThisBuild / pgpPassphrase := sys.env.get("PGP_PASSPHRASE").map(_.toArray)
 ThisBuild / credentials += (for {
   username <- sys.env.get("SONATYPE_USERNAME")
@@ -34,6 +32,8 @@ ThisBuild / credentials += (for {
   username,
   password
 ))
+ThisBuild / dynverSonatypeSnapshots := true
+ThisBuild / publishTo := sonatypePublishToBundle.value
 
 lazy val root = project
   .in(file("."))
