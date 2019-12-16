@@ -10,7 +10,7 @@ jobs:
       - uses: actions/cache@v1
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-sbt-
       - uses: actions/setup-java@v1
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/cache@v1
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-sbt-
       - uses: actions/setup-java@v1
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/cache@v1
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-sbt-
       - uses: actions/setup-java@v1
@@ -73,7 +73,7 @@ jobs:
       - uses: actions/cache@v1
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-sbt-
       - uses: actions/setup-java@v1

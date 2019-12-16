@@ -6,11 +6,11 @@ ThisBuild / organizationName := "regadas"
 ThisBuild / licenses := Seq(
   "APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt")
 )
-ThisBuild / homepage := Some(url("https://github.com/regadas/gha-hello-world"))
+ThisBuild / homepage := Some(url("https://github.com/regadas/scala-seed"))
 ThisBuild / scmInfo := Some(
   ScmInfo(
-    url("https://github.com/regadas/gha-hello-world"),
-    "scm:git@github.com:regadas/gha-hello-world.git"
+    url("https://github.com/regadas/scala-seed"),
+    "scm:git@github.com:regadas/scala-seed.git"
   )
 )
 ThisBuild / developers := List(
@@ -38,7 +38,7 @@ ThisBuild / publishTo := sonatypePublishToBundle.value
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "gha-hello-world",
+    name := "scala-seed",
     crossScalaVersions := Seq("2.12.10", scalaVersion.value),
     libraryDependencies += scalaTest % Test
   )
