@@ -9,16 +9,22 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/cache@v1
         with:
+          path: ~/.sbt
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          restore-keys: |
+            ${{ runner.os }}-sbt-
+      - uses: actions/cache@v1
+        with:
           path: ~/.ivy2/cache
           key: ${{ runner.os }}-ivy-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-ivy-
       - uses: actions/cache@v1
         with:
-          path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          path: ~/.cache/coursier
+          key: ${{ runner.os }}-coursier-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
-            ${{ runner.os }}-sbt-
+            ${{ runner.os }}-coursier-
       - uses: actions/setup-java@v1
         with:
           java-version: "11.0.5"
@@ -35,16 +41,22 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/cache@v1
         with:
+          path: ~/.sbt
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          restore-keys: |
+            ${{ runner.os }}-sbt-
+      - uses: actions/cache@v1
+        with:
           path: ~/.ivy2/cache
           key: ${{ runner.os }}-ivy-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-ivy-
       - uses: actions/cache@v1
         with:
-          path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          path: ~/.cache/coursier
+          key: ${{ runner.os }}-coursier-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
-            ${{ runner.os }}-sbt-
+            ${{ runner.os }}-coursier-
       - uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
@@ -59,16 +71,22 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/cache@v1
         with:
+          path: ~/.sbt
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          restore-keys: |
+            ${{ runner.os }}-sbt-
+      - uses: actions/cache@v1
+        with:
           path: ~/.ivy2/cache
           key: ${{ runner.os }}-ivy-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-ivy-
       - uses: actions/cache@v1
         with:
-          path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          path: ~/.cache/coursier
+          key: ${{ runner.os }}-coursier-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
-            ${{ runner.os }}-sbt-
+            ${{ runner.os }}-coursier-
       - uses: actions/setup-java@v1
         with:
           java-version: "11.0.5"
@@ -90,16 +108,22 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/cache@v1
         with:
+          path: ~/.sbt
+          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          restore-keys: |
+            ${{ runner.os }}-sbt-
+      - uses: actions/cache@v1
+        with:
           path: ~/.ivy2/cache
           key: ${{ runner.os }}-ivy-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
             ${{ runner.os }}-ivy-
       - uses: actions/cache@v1
         with:
-          path: ~/.cache
-          key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
+          path: ~/.cache/coursier
+          key: ${{ runner.os }}-coursier-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/plugins.sbt') }}-${{ hashFiles('project/Dependencies.scala') }}
           restore-keys: |
-            ${{ runner.os }}-sbt-
+            ${{ runner.os }}-coursier-
       - uses: actions/setup-java@v1
         with:
           java-version: "11.0.5"
