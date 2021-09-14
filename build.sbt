@@ -39,7 +39,7 @@ lazy val root = project
   .in(file("."))
   .settings(
     name := "scala-seed",
-    crossScalaVersions := Seq("2.12.10", scalaVersion.value),
+    crossScalaVersions := Seq("2.12.15", scalaVersion.value),
     libraryDependencies += scalaTest % Test
   )
 
