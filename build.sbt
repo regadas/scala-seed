@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / scalaVersion := "2.13.1"
+ThisBuild / scalaVersion := "2.13.13"
 ThisBuild / organization := "io.regadas"
 ThisBuild / organizationName := "regadas"
 ThisBuild / licenses := Seq(
